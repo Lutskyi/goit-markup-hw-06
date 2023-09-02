@@ -1248,9 +1248,9 @@ input[type='checkbox']:checked + .label-checkbox > .span-label-checkbox {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 32px;
+  width: 428px;
+  height: 796px;
+  padding: 0;
   background-color: var(--White-background);
   z-index: 999;
 
@@ -1260,7 +1260,9 @@ input[type='checkbox']:checked + .label-checkbox > .span-label-checkbox {
 
 .menu-container.is-open {
   transform: translateX(0);
-  padding: 0;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-bottom: 40px;
 }
 
 .menu-container .menu-toggle {
@@ -1269,40 +1271,52 @@ input[type='checkbox']:checked + .label-checkbox > .span-label-checkbox {
   right: 16px;
   color: #fff;
 }
-
+.mobile-menu-pages{
+display: inline-flex;
+}
 .mobile-menu {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 
 .mobile-menu .link {
-  display: block;
-  padding: 10px;
-  color: #fff;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1,11; 
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
   text-decoration: none;
+  
 }
 .menu-toggle-close{
   min-width: 24px;
   min-height: 24px;
-  stroke::not--Accent); 
-  stroke-width: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  opacity:0.1;
   display: flex;
   position: absolute;
   top: 24px;
   right: 24px;
-  /* margin-top: 24px;
-  margin-left: auto;
-  margin-right: 24px;
-  display: flex; */
+  background-color: transparent;
   padding: 8px;
 }
 .button-close {
   stroke: var(--Dark);
 }
-
+ 
+.part-mobile-menu {
+  color: var(--Dark);
+  margin-bottom:none(last-child) 40px;
+}
+ 
+.part-mobile-menu:hover {
+  color: var(--Pressed-state)
+}
+.part-mobile-menu:focus {
+  color: var(--Pressed-state)
+}
 /*
   .button-hamburger {
     stroke: #2e2f42;
