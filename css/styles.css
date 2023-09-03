@@ -53,6 +53,33 @@ ul {
     max-width: 1440px;
   }
 }
+
+.search {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  height: 70px;
+}
+/* @media only screen and (max-width: 767px) {
+  .search {
+    height: 70px;
+  }
+} */
+
+@media only screen and (min-width: 768px) {
+  .search {
+    height: 72px;
+  }
+  .search-container {
+    height: 72px;
+  }
+}
+
+/* @media only screen and (min-width: 1158px) {
+  .search {
+    height: 72px;
+  }
+} */
 .search-container {
   display: flex;
   align-items: center;
@@ -61,16 +88,6 @@ ul {
   /* margin-left: 16px;
   margin-right: 16px;
   margin-bottom: 23.5px; */
-}
-.search {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-@media only screen and (max-width: 767px) {
-  .search {
-    height: 70px;
-  }
 }
 
 @media (max-width: 428px) {
@@ -84,15 +101,15 @@ ul {
   align-items: center;
   margin-top: 25.5px;
   margin-left: 16px;
-  margin-bottom: 23.5px; */
+  margin-bottom: 23.5px;
 }
 
-@media only screen and (max-width: 428px) {
+/* @media only screen and (max-width: 428px) {
   .nav-section {
     /* margin-top: 25.5px;
-    margin-left: 16px; */
+    margin-left: 16px; 
   }
-}
+} */
 
 .link {
   text-decoration: none;
@@ -605,7 +622,7 @@ ul {
 .end {
   background-color: var(--Dark);
   padding: 97.5px 0 96px;
-    margin: 0;
+  margin: 0;
 }
 
 /* @media (max-width: 428px) {
@@ -779,7 +796,6 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 }
 
@@ -797,21 +813,17 @@ ul {
   border-radius: 4px;
   font-size: 12px;
   line-height: 1.5;
-  
-  
+
   letter-spacing: 0.04em;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-
- 
-@media screen (max-width: 428px) {
+@media screen and (max-width: 428px) {
   .footer-form-input,
   .foter-form-label,
   .footer-form,
   .footer-right {
     width: 100%;
-    
   }
 }
 
@@ -1223,8 +1235,8 @@ input[type='checkbox']:checked + .label-checkbox > .span-label-checkbox {
   align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
-  margin-right: 16px; 
-  margin-left: auto;
+  margin-right: 16px;
+  /* margin-left: auto; */
 
   padding: 0;
   background-color: transparent;
@@ -1256,20 +1268,17 @@ input[type='checkbox']:checked + .label-checkbox > .span-label-checkbox {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 
-   display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-}
- 
-@media screen (min-width:1158px) {
-  .menu-container {
-    position:
-  
-  }
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-  
+@media (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
 
 .menu-container.is-open {
   transform: translateX(0);
@@ -1284,8 +1293,8 @@ input[type='checkbox']:checked + .label-checkbox > .span-label-checkbox {
   right: 16px;
   color: #fff;
 }
-.mobile-menu-pages{
-display: flex;
+.mobile-menu-pages {
+  display: flex;
 }
 .mobile-menu {
   list-style: none;
@@ -1294,20 +1303,18 @@ display: flex;
   flex-direction: column;
 }
 
-
 .mobile-menu .link {
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
   font-size: 36px;
   font-weight: 700;
-  line-height: 1,11; 
+  line-height: 1, 11;
   letter-spacing: 0.72px;
   text-transform: capitalize;
   text-decoration: none;
-  
 }
-.menu-toggle-close{
+.menu-toggle-close {
   min-width: 24px;
   min-height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1315,24 +1322,24 @@ display: flex;
   display: flex;
   position: absolute;
   top: 24px;
-  right: 24px; 
+  right: 24px;
   background-color: transparent;
   padding: 8px;
 }
 .button-close {
   stroke: var(--Dark);
 }
- 
+
 .part-mobile-menu {
   color: var(--Dark);
-  margin-bottom:none(last-child) 40px;
+  margin-bottom: none(last-child) 40px;
 }
- 
+
 .part-mobile-menu:hover {
-  color: var(--Pressed-state)
+  color: var(--Pressed-state);
 }
 .part-mobile-menu:focus {
-  color: var(--Pressed-state)
+  color: var(--Pressed-state);
 }
 
 .adress-mobile-menu {
@@ -1342,8 +1349,8 @@ display: flex;
 }
 
 .adress-link-tel {
-  color: var(--IRIS, #4D5AE5);
-  font-size: 36px;
+  color: var(--IRIS, #4d5ae5);
+  font-size: 32px;
   font-weight: 700;
 }
 
@@ -1368,8 +1375,8 @@ display: flex;
 
 .list-end-person-social-network-mobile {
   display: flex;
-  flex-direction:row;
-  gap: 56px;
+  flex-direction: row;
+  gap: 42px;
 }
 /*
   .button-hamburger {
